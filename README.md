@@ -31,7 +31,7 @@ drop-in replacement shader to add triplanar cliff shading to the default Unity t
 This tries to replace as little as possible in the built-in Unity shaders. It's 2 files:
 
 - `TerrainSplatmapTriplanar.cginc` is just a copy of `TerrainSplatmapCommon.cginc` from Unity 2021.2.0f1 built-in shaders, except it adds `worldPos` and `worldNormal` to the `Input` shader struct. Unity's shader magic automatically populates IN.worldPos and IN.worldNormal variables if they're defined, so there's nothing else to do there.
-- `Terrain-TriplanarStandard-FirstPass.shader` has various cliff texture properties, hooks into TerrainSplatmapTriplanar instead of the default TerrainSplatmapCommon, and then applies triplanar mapping to the terrain mesh in the `surf()` function. You should probably tweak some of the hardcoded values.
+- `Terrain-TriplanarStandard-FirstPass.shader` is a modded version of `Terrain-Standard-FirstPass.shader` etc etc... I added various cliff texture properties, hooks into TerrainSplatmapTriplanar instead of default TerrainSplatmapCommon, and then applies triplanar mapping to the terrain mesh in the `surf()` function. You should probably tweak some of the hardcoded values.
 
 When this inevitably breaks in future Unity versions, you can easily patch this shader yourself by following those steps above, and copy and pasting the relevant sections. You'll need to know a little about shaders to do that. I recommend Catlike Coding's shader tutorials for a good intro to Unity shaders.
 

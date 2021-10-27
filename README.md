@@ -1,7 +1,9 @@
 # unity-triplanar-terrain-cliff-shader
 drop-in replacement shader to add triplanar cliff shading to the default Unity terrain system (no plugins, vanilla terrain system, built-in 3D pipeline)
 
-(image)
+![image](https://user-images.githubusercontent.com/2285943/138999651-01563359-2f23-4b0a-8cc5-0dfe9cff2481.png)
+
+![image](https://user-images.githubusercontent.com/2285943/138999685-e38c4270-0276-45c8-a0c8-3bda808e7b24.png)
 
 ## description
 - this shader adds a single albedo + bump map as a general "cliff" texture, to tile along the X and Z planes

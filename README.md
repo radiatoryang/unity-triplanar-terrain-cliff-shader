@@ -37,8 +37,8 @@ This tries to replace as little as possible in the built-in Unity shaders. It's 
 When this inevitably breaks in future Unity versions (or if you need to add this to a terrain shader for an older Unity version) then you can easily patch this shader yourself by following those steps above, and copy and pasting the relevant sections. You'll need to know a little about shaders to do that. I recommend Catlike Coding's shader tutorials for a good intro to Unity shaders.
 
 ## license
-public domain / unlicense / cc0
+MIT
 
-I'm happy if this helps you and I'm happy to share, but I'm not really going to maintain this repo or pay much attention to requests, sorry
+I'm happy if this helps you and I'm happy to share, but I'm not really going to maintain this repo or update it frequently
 
 textures (not included) are from ambientCG.com

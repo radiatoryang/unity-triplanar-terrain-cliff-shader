@@ -13,20 +13,18 @@ drop-in replacement shader to add triplanar cliff shading to the default Unity t
 ## compatibility
 - for built-in 3D pipeline only (maybe you can modify it for HDRP / URP? but I'm not going to port it, sorry)
 - made for Unity 2021.2+ but probably mostly works for Unity 2019.3+ / 2020.x? but haven't tested it, sorry
+- breaks on instanced terrain though (idk why)... PRs welcome
 
 ## usage / install
 1. put `TerrainSplatmapTriplanar.cginc` and `Terrain-TriplanarStandard-FirstPass.shader` somewhere in your Unity `/Assets/` folder
 2. create a new Material that uses the `/Nature/Terrain/StandardTriplanar` shader
 3. in your Terrain object settings, assign the material from step 2
-4. configure cliff albedo + normal map in the material (not as a terrain layer)
+    - KNOWN ISSUE: you must disable Draw Instanced on the Terrain... 
+5. configure cliff albedo + normal map in the material (not as a terrain layer)
 
 ![image](https://user-images.githubusercontent.com/2285943/138999685-e38c4270-0276-45c8-a0c8-3bda808e7b24.png)
 
 ![image](https://user-images.githubusercontent.com/2285943/139000215-6b61c2d9-484f-4444-8372-58006d12e002.png)
-
-## known issues
-- didn't include triplanar in Terrain base map because I didn't need it ... this is left as an exercise for the reader
-- didn't include triplanar in any Terrain addpass shaders because I didn't need it ... this is also left as an exercise for the reader
 
 ## implementation
 

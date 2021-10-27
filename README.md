@@ -3,8 +3,6 @@ drop-in replacement shader to add triplanar cliff shading to the default Unity t
 
 ![image](https://user-images.githubusercontent.com/2285943/138999651-01563359-2f23-4b0a-8cc5-0dfe9cff2481.png)
 
-![image](https://user-images.githubusercontent.com/2285943/138999685-e38c4270-0276-45c8-a0c8-3bda808e7b24.png)
-
 ## description
 - this shader adds a single albedo + bump map as a general "cliff" texture, to tile along the X and Z planes
 - as an optimization, I didn't add Y plane sampling, so technically this is more biplanar than triplanar
@@ -17,10 +15,14 @@ drop-in replacement shader to add triplanar cliff shading to the default Unity t
 - made for Unity 2021.2+ but probably mostly works for Unity 2019.3+ / 2020.x? but haven't tested it, sorry
 
 ## usage / install
-1. put the `/TriplanarTerrainShaders/` folder in your Unity `/Assets/` folder
+1. put `TerrainSplatmapTriplanar.cginc` and `Terrain-TriplanarStandard-FirstPass.shader` somewhere in your Unity `/Assets/` folder
 2. create a new Material that uses the `/Nature/Terrain/StandardTriplanar` shader
 3. in your Terrain object settings, assign the material from step 2
 4. configure cliff albedo + normal map in the material (not as a terrain layer)
+
+![image](https://user-images.githubusercontent.com/2285943/138999685-e38c4270-0276-45c8-a0c8-3bda808e7b24.png)
+
+![image](https://user-images.githubusercontent.com/2285943/139000215-6b61c2d9-484f-4444-8372-58006d12e002.png)
 
 ## implementation
 
